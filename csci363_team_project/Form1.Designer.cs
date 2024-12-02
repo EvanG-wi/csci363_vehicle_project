@@ -36,6 +36,8 @@
             this.tabSettings = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabVehicleStatus.SuspendLayout();
             this.tabSecurity.SuspendLayout();
@@ -63,13 +65,14 @@
             this.tabLocate.Location = new System.Drawing.Point(4, 104);
             this.tabLocate.Name = "tabLocate";
             this.tabLocate.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLocate.Size = new System.Drawing.Size(794, 320);
+            this.tabLocate.Size = new System.Drawing.Size(794, 341);
             this.tabLocate.TabIndex = 0;
             this.tabLocate.Text = "Locate";
             this.tabLocate.UseVisualStyleBackColor = true;
             // 
             // tabVehicleStatus
             // 
+            this.tabVehicleStatus.Controls.Add(this.panel1);
             this.tabVehicleStatus.Controls.Add(this.pictureBox1);
             this.tabVehicleStatus.Location = new System.Drawing.Point(4, 104);
             this.tabVehicleStatus.Name = "tabVehicleStatus";
@@ -81,6 +84,7 @@
             // 
             // tabSecurity
             // 
+            this.tabSecurity.Controls.Add(this.label1);
             this.tabSecurity.Controls.Add(this.button1);
             this.tabSecurity.Location = new System.Drawing.Point(4, 104);
             this.tabSecurity.Name = "tabSecurity";
@@ -93,7 +97,7 @@
             // 
             this.tabUsers.Location = new System.Drawing.Point(4, 104);
             this.tabUsers.Name = "tabUsers";
-            this.tabUsers.Size = new System.Drawing.Size(794, 320);
+            this.tabUsers.Size = new System.Drawing.Size(794, 341);
             this.tabUsers.TabIndex = 3;
             this.tabUsers.Text = "Users";
             this.tabUsers.UseVisualStyleBackColor = true;
@@ -127,6 +131,22 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(476, 217);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(33, 53);
+            this.panel1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(324, 107);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "label1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -138,6 +158,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabVehicleStatus.ResumeLayout(false);
             this.tabSecurity.ResumeLayout(false);
+            this.tabSecurity.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -153,6 +174,8 @@
         private System.Windows.Forms.TabPage tabSettings;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
     }
 }
 
