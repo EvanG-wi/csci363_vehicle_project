@@ -34,7 +34,9 @@
             this.tabSecurity = new System.Windows.Forms.TabPage();
             this.tabUsers = new System.Windows.Forms.TabPage();
             this.tabSettings = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
+            this.tabSecurity.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -75,6 +77,7 @@
             // 
             // tabSecurity
             // 
+            this.tabSecurity.Controls.Add(this.button1);
             this.tabSecurity.Location = new System.Drawing.Point(4, 104);
             this.tabSecurity.Name = "tabSecurity";
             this.tabSecurity.Size = new System.Drawing.Size(796, 344);
@@ -100,6 +103,16 @@
             this.tabSettings.Text = "Settings";
             this.tabSettings.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(518, 176);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(86, 52);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -109,6 +122,7 @@
             this.Name = "Form1";
             this.Text = "Vehicle Manager Application";
             this.tabControl1.ResumeLayout(false);
+            this.tabSecurity.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -121,6 +135,7 @@
         private System.Windows.Forms.TabPage tabSecurity;
         private System.Windows.Forms.TabPage tabUsers;
         private System.Windows.Forms.TabPage tabSettings;
+        private System.Windows.Forms.Button button1;
     }
 }
 
