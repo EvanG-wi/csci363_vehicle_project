@@ -35,8 +35,11 @@
             this.tabUsers = new System.Windows.Forms.TabPage();
             this.tabSettings = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
+            this.tabVehicleStatus.SuspendLayout();
             this.tabSecurity.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -47,11 +50,11 @@
             this.tabControl1.Controls.Add(this.tabUsers);
             this.tabControl1.Controls.Add(this.tabSettings);
             this.tabControl1.ItemSize = new System.Drawing.Size(159, 100);
-            this.tabControl1.Location = new System.Drawing.Point(-2, -1);
+            this.tabControl1.Location = new System.Drawing.Point(-3, -1);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(804, 452);
+            this.tabControl1.Size = new System.Drawing.Size(802, 449);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 0;
             // 
@@ -60,17 +63,18 @@
             this.tabLocate.Location = new System.Drawing.Point(4, 104);
             this.tabLocate.Name = "tabLocate";
             this.tabLocate.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLocate.Size = new System.Drawing.Size(796, 344);
+            this.tabLocate.Size = new System.Drawing.Size(794, 320);
             this.tabLocate.TabIndex = 0;
             this.tabLocate.Text = "Locate";
             this.tabLocate.UseVisualStyleBackColor = true;
             // 
             // tabVehicleStatus
             // 
+            this.tabVehicleStatus.Controls.Add(this.pictureBox1);
             this.tabVehicleStatus.Location = new System.Drawing.Point(4, 104);
             this.tabVehicleStatus.Name = "tabVehicleStatus";
             this.tabVehicleStatus.Padding = new System.Windows.Forms.Padding(3);
-            this.tabVehicleStatus.Size = new System.Drawing.Size(796, 344);
+            this.tabVehicleStatus.Size = new System.Drawing.Size(794, 341);
             this.tabVehicleStatus.TabIndex = 1;
             this.tabVehicleStatus.Text = "Vehicle Status";
             this.tabVehicleStatus.UseVisualStyleBackColor = true;
@@ -80,7 +84,7 @@
             this.tabSecurity.Controls.Add(this.button1);
             this.tabSecurity.Location = new System.Drawing.Point(4, 104);
             this.tabSecurity.Name = "tabSecurity";
-            this.tabSecurity.Size = new System.Drawing.Size(796, 344);
+            this.tabSecurity.Size = new System.Drawing.Size(794, 341);
             this.tabSecurity.TabIndex = 2;
             this.tabSecurity.Text = "Security";
             this.tabSecurity.UseVisualStyleBackColor = true;
@@ -89,7 +93,7 @@
             // 
             this.tabUsers.Location = new System.Drawing.Point(4, 104);
             this.tabUsers.Name = "tabUsers";
-            this.tabUsers.Size = new System.Drawing.Size(796, 344);
+            this.tabUsers.Size = new System.Drawing.Size(794, 320);
             this.tabUsers.TabIndex = 3;
             this.tabUsers.Text = "Users";
             this.tabUsers.UseVisualStyleBackColor = true;
@@ -98,7 +102,7 @@
             // 
             this.tabSettings.Location = new System.Drawing.Point(4, 104);
             this.tabSettings.Name = "tabSettings";
-            this.tabSettings.Size = new System.Drawing.Size(796, 344);
+            this.tabSettings.Size = new System.Drawing.Size(794, 341);
             this.tabSettings.TabIndex = 4;
             this.tabSettings.Text = "Settings";
             this.tabSettings.UseVisualStyleBackColor = true;
@@ -113,16 +117,28 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::csci363_team_project.Properties.Resources.car_jpg;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(380, 341);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(793, 445);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Vehicle Manager Application";
             this.tabControl1.ResumeLayout(false);
+            this.tabVehicleStatus.ResumeLayout(false);
             this.tabSecurity.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -136,6 +152,7 @@
         private System.Windows.Forms.TabPage tabUsers;
         private System.Windows.Forms.TabPage tabSettings;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
