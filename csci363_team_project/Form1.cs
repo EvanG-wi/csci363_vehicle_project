@@ -35,6 +35,22 @@ namespace csci363_team_project
                     label1.Invoke(new Action(() => label1.Text = input[1]));
                     //label1.Text = input[1];
                 }
+                else if(input[0] == "alarm")
+                {
+                    //alarm_trigger = true
+                    ;
+                }
+                else if (input[0] == "fuel")
+                {
+                    //fuel_guage = input[1]
+                    ;
+                }
+                else if (input[0] == "battery")
+                {
+                    //battery_gauge = input[1]
+                    ;
+                }
+
             }
         }
 
