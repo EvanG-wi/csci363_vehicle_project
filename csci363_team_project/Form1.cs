@@ -48,9 +48,34 @@ namespace csci363_team_project
                 else if (input[0] == "battery")
                 {
                     //battery_gauge = input[1]
-                    ;
+                    UpdateBatteryIndicator(int.Parse(input[1]));
                 }
 
+            }
+        }
+
+        private void UpdateBatteryIndicator(int percentCharged)
+        {
+            switch (percentCharged)
+            {
+                case int n when n == 0:
+                    BatteryIndicator.Image = Image.FromFile("battery0.jpg");
+                    break;
+                case int n when n  < 20:
+                    BatteryIndicator.Image = Image.FromFile("battery1.jpg");
+                    break;
+                case int n when n < 40:
+                    BatteryIndicator.Image = Image.FromFile("battery2.jpg");
+                    break;
+                case int n when n < 60:
+                    BatteryIndicator.Image = Image.FromFile("battery3.jpg");
+                    break;
+                case int n when n < 80:
+                    BatteryIndicator.Image = Image.FromFile("battery4.jpg");
+                    break;
+                default:
+                    BatteryIndicator.Image = Image.FromFile("battery5.jpg");
+                    break;
             }
         }
 

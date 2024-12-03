@@ -63,6 +63,16 @@ namespace csci363_team_project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap battery0 {
+            get {
+                object obj = ResourceManager.GetObject("battery0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap car_jpg {
             get {
                 object obj = ResourceManager.GetObject("car_jpg", resourceCulture);
