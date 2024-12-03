@@ -106,6 +106,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="car_jpg.jpg" />
+    <Content Include="fuelIndicatorEmpty.jpg" />
+    <Content Include="fuelIndicatorFull.jpg" />
+    <Content Include="fuelIndicatorHalf.jpg" />
+    <None Include="images\fuelIndicatorEmpty.jpg" />
     <None Include="Resources\battery0.jpg" />
     <None Include="Resources\car_jpg.jpg" />
   </ItemGroup>

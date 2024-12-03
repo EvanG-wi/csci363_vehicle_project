@@ -42,12 +42,10 @@ namespace csci363_team_project
                 }
                 else if (input[0] == "fuel")
                 {
-                    //fuel_guage = input[1]
-                    ;
+                    UpdateFuelIndicator(int.Parse(input[1]));
                 }
                 else if (input[0] == "battery")
                 {
-                    //battery_gauge = input[1]
                     UpdateBatteryIndicator(int.Parse(input[1]));
                 }
 
@@ -61,7 +59,7 @@ namespace csci363_team_project
                 case int n when n == 0:
                     BatteryIndicator.Image = Image.FromFile("battery0.jpg");
                     break;
-                case int n when n  < 20:
+                case int n when n < 20:
                     BatteryIndicator.Image = Image.FromFile("battery1.jpg");
                     break;
                 case int n when n < 40:
@@ -75,6 +73,21 @@ namespace csci363_team_project
                     break;
                 default:
                     BatteryIndicator.Image = Image.FromFile("battery5.jpg");
+                    break;
+            }
+        }
+        private void UpdateFuelIndicator(int percentFull)
+        {
+            switch (percentFull)
+            {
+                case int n when n <10:
+                    FuelIndicator.Image = Image.FromFile("fuelIndicatorEmpty.jpg");
+                    break;
+                case int n when n > 90:
+                    FuelIndicator.Image = Image.FromFile("fuelIndicatorFull.jpg");
+                    break;
+                default:
+                    FuelIndicator.Image = Image.FromFile("fuelIndicatorHalf.jpg");
                     break;
             }
         }

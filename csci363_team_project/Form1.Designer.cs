@@ -36,11 +36,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.tabUsers = new System.Windows.Forms.TabPage();
             this.tabSettings = new System.Windows.Forms.TabPage();
+            this.FuelIndicator = new System.Windows.Forms.PictureBox();
             this.BatteryIndicator = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabVehicleStatus.SuspendLayout();
             this.tabSecurity.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FuelIndicator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BatteryIndicator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -73,6 +75,7 @@
             // 
             // tabVehicleStatus
             // 
+            this.tabVehicleStatus.Controls.Add(this.FuelIndicator);
             this.tabVehicleStatus.Controls.Add(this.BatteryIndicator);
             this.tabVehicleStatus.Controls.Add(this.pictureBox1);
             this.tabVehicleStatus.Location = new System.Drawing.Point(4, 104);
@@ -131,10 +134,20 @@
             this.tabSettings.Text = "Settings";
             this.tabSettings.UseVisualStyleBackColor = true;
             // 
+            // FuelIndicator
+            // 
+            this.FuelIndicator.Image = global::csci363_team_project.Properties.Resources.fuelIndicatorEmpty;
+            this.FuelIndicator.Location = new System.Drawing.Point(69, 23);
+            this.FuelIndicator.Name = "FuelIndicator";
+            this.FuelIndicator.Size = new System.Drawing.Size(140, 99);
+            this.FuelIndicator.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.FuelIndicator.TabIndex = 4;
+            this.FuelIndicator.TabStop = false;
+            // 
             // BatteryIndicator
             // 
             this.BatteryIndicator.Image = global::csci363_team_project.Properties.Resources.battery0;
-            this.BatteryIndicator.Location = new System.Drawing.Point(304, 55);
+            this.BatteryIndicator.Location = new System.Drawing.Point(263, 45);
             this.BatteryIndicator.Name = "BatteryIndicator";
             this.BatteryIndicator.Size = new System.Drawing.Size(57, 86);
             this.BatteryIndicator.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -163,6 +176,7 @@
             this.tabVehicleStatus.ResumeLayout(false);
             this.tabSecurity.ResumeLayout(false);
             this.tabSecurity.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FuelIndicator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BatteryIndicator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -181,6 +195,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox BatteryIndicator;
+        private System.Windows.Forms.PictureBox FuelIndicator;
     }
 }
 
