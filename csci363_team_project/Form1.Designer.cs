@@ -39,12 +39,15 @@
             this.FuelIndicator = new System.Windows.Forms.PictureBox();
             this.BatteryIndicator = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabVehicleStatus.SuspendLayout();
             this.tabSecurity.SuspendLayout();
+            this.tabUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FuelIndicator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BatteryIndicator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -118,6 +121,7 @@
             // 
             // tabUsers
             // 
+            this.tabUsers.Controls.Add(this.pictureBox2);
             this.tabUsers.Location = new System.Drawing.Point(4, 104);
             this.tabUsers.Name = "tabUsers";
             this.tabUsers.Size = new System.Drawing.Size(794, 341);
@@ -164,6 +168,16 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::csci363_team_project.Properties.Resources.person;
+            this.pictureBox2.Location = new System.Drawing.Point(104, 132);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(126, 153);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -176,9 +190,11 @@
             this.tabVehicleStatus.ResumeLayout(false);
             this.tabSecurity.ResumeLayout(false);
             this.tabSecurity.PerformLayout();
+            this.tabUsers.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.FuelIndicator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BatteryIndicator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -196,6 +212,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox BatteryIndicator;
         private System.Windows.Forms.PictureBox FuelIndicator;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

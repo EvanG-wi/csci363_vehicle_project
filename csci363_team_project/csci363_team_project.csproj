@@ -105,10 +105,21 @@
     <Content Include="car.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="car_jpg.jpg" />
-    <Content Include="fuelIndicatorEmpty.jpg" />
-    <Content Include="fuelIndicatorFull.jpg" />
-    <Content Include="fuelIndicatorHalf.jpg" />
+    <Content Include="car_jpg.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fuelIndicatorEmpty.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fuelIndicatorFull.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fuelIndicatorHalf.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="person.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="images\fuelIndicatorEmpty.jpg" />
     <None Include="Resources\battery0.jpg" />
     <None Include="Resources\car_jpg.jpg" />
