@@ -14,15 +14,20 @@ namespace csci363_team_project
     public partial class Form1 : Form
     {
         private bool running = true;
+        private bool isAlarmArmed = false; // Track the alarm state
+        private bool isLocked = false; // Track lock/unlock state
         public Form1()
         {
+
+            InitializeComponent(); // Always call this first
+            this.Load += Form1_Load; // Attach the Form Load event
+
+            // Start the console command thread
             Thread consoleThread = new Thread(ListenForConsoleCommands)
             {
                 IsBackground = true
             };
             consoleThread.Start();
-
-            InitializeComponent();
         }
         private void ListenForConsoleCommands()
         {
@@ -32,7 +37,7 @@ namespace csci363_team_project
                 string[] input = Console.ReadLine().Split(' ');
                 if (input[0] == "test")
                 {
-                    label1.Invoke(new Action(() => label1.Text = input[1]));
+                    alarmStatusLabel.Invoke(new Action(() => alarmStatusLabel.Text = input[1]));
                     //label1.Text = input[1];
                 }
                 else if(input[0] == "alarm")
@@ -89,6 +94,52 @@ namespace csci363_team_project
                 default:
                     FuelIndicator.Image = Image.FromFile("fuelIndicatorHalf.jpg");
                     break;
+            }
+        }
+
+        private void armAlarmButton_Click(object sender, EventArgs e)
+        {
+            // Toggle the alarm state
+            isAlarmArmed = !isAlarmArmed;
+
+            // Update the UI based on the new state
+            if (isAlarmArmed)
+            {
+                armAlarmButton.Text = "Disarm Alarm"; // Update button text
+                
+                armAlarmButton.BackColor = Color.LightCoral; // Red for armed
+            }
+            else
+            {
+                armAlarmButton.Text = "Sound Alarm"; // Update button text
+                
+                armAlarmButton.BackColor = Color.LightGreen; // Green for disarmed
+            }
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // Set default state to disarmed
+            isAlarmArmed = false; // Alarm starts disarmed
+            
+            
+            armAlarmButton.BackColor = Color.LightGreen; // Green indicates safe/disarmed state
+
+           
+        }
+
+        private void lockUnlockButton_Click(object sender, EventArgs e)
+        {
+            isLocked = !isLocked;
+
+            if (isLocked)
+            {
+                lockUnlockButton.Image = Properties.Resources.locksmall;
+                lockUnlockButton.Text = "Locked"; // Optional: Update text
+            }
+            else
+            {
+                lockUnlockButton.Image = Properties.Resources.unlocksmall; // Set to unlocked image
+                lockUnlockButton.Text = "Unlocked"; // Optional: Update text
             }
         }
 
