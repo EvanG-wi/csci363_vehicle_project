@@ -11,12 +11,13 @@ using System.Windows.Forms;
 
 namespace csci363_team_project
 {
-    public partial class Form1 : Form
+    public partial class vehicleControlApp : Form
     {
         private bool running = true;
         private bool isAlarmArmed = false; // Track the alarm state
         private bool isLocked = false; // Track lock/unlock state
-        public Form1()
+        private bool areDoorsAjar = false;
+        public vehicleControlApp()
         {
 
             InitializeComponent(); // Always call this first
@@ -37,7 +38,7 @@ namespace csci363_team_project
                 string[] input = Console.ReadLine().Split(' ');
                 if (input[0] == "test")
                 {
-                    alarmStatusLabel.Invoke(new Action(() => alarmStatusLabel.Text = input[1]));
+                    //alarmStatusLabel.Invoke(new Action(() => alarmStatusLabel.Text = input[1]));
                     //label1.Text = input[1];
                 }
                 else if(input[0] == "alarm")
@@ -119,12 +120,13 @@ namespace csci363_team_project
         private void Form1_Load(object sender, EventArgs e)
         {
             // Set default state to disarmed
-            isAlarmArmed = false; // Alarm starts disarmed
-            
-            
-            armAlarmButton.BackColor = Color.LightGreen; // Green indicates safe/disarmed state
+            isAlarmArmed = false; 
+            armAlarmButton.BackColor = Color.LightGreen;
 
-           
+            doorStatusPictureBox.Image = Properties.Resources.doorsAjar;
+            doorStatusPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            doorStatusPictureBox.BackColor = Color.Green;
+
         }
 
         private void lockUnlockButton_Click(object sender, EventArgs e)
@@ -143,9 +145,25 @@ namespace csci363_team_project
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
 
+        private void UpdateDoorStatus()
+        {
+            if (areDoorsAjar)
+            {
+                // Set "Doors Ajar" state
+                doorStatusPictureBox.BackColor = Color.Red;
+                doorStatusLabel.Text = "Doors: Ajar";
+                doorStatusLabel.ForeColor = Color.Red;
+            }
+            else
+            {
+                // Set "Doors Closed" state
+                doorStatusPictureBox.BackColor = Color.Green;
+                doorStatusLabel.Text = "Doors: Closed";
+                doorStatusLabel.ForeColor = Color.Green;
+            }
         }
+
+
     }
 }

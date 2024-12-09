@@ -93,6 +93,16 @@ namespace csci363_team_project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap doorsAjar {
+            get {
+                object obj = ResourceManager.GetObject("doorsAjar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fuelIndicatorEmpty {
             get {
                 object obj = ResourceManager.GetObject("fuelIndicatorEmpty", resourceCulture);
@@ -116,6 +126,16 @@ namespace csci363_team_project.Properties {
         internal static System.Drawing.Bitmap open_door {
             get {
                 object obj = ResourceManager.GetObject("open_door", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap open_doorsmall {
+            get {
+                object obj = ResourceManager.GetObject("open_doorsmall", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
