@@ -34,7 +34,7 @@
             this.mapImage = new System.Windows.Forms.PictureBox();
             this.tabVehicleStatus = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.remoteStartButton = new System.Windows.Forms.Button();
+            this.RemoteStartButton = new System.Windows.Forms.Button();
             this.FuelIndicator = new System.Windows.Forms.PictureBox();
             this.BatteryIndicator = new System.Windows.Forms.PictureBox();
             this.tabSecurity = new System.Windows.Forms.TabPage();
@@ -46,7 +46,7 @@
             this.tabUsers = new System.Windows.Forms.TabPage();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabSettings = new System.Windows.Forms.TabPage();
-            this.internalTempIndicator = new System.Windows.Forms.Label();
+            this.InternalTempIndicator = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabLocate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mapImage)).BeginInit();
@@ -100,8 +100,8 @@
             // 
             // tabVehicleStatus
             // 
-            this.tabVehicleStatus.Controls.Add(this.internalTempIndicator);
-            this.tabVehicleStatus.Controls.Add(this.remoteStartButton);
+            this.tabVehicleStatus.Controls.Add(this.InternalTempIndicator);
+            this.tabVehicleStatus.Controls.Add(this.RemoteStartButton);
             this.tabVehicleStatus.Controls.Add(this.FuelIndicator);
             this.tabVehicleStatus.Controls.Add(this.BatteryIndicator);
             this.tabVehicleStatus.Controls.Add(this.pictureBox1);
@@ -123,14 +123,14 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // remoteStartButton
+            // RemoteStartButton
             // 
-            this.remoteStartButton.Location = new System.Drawing.Point(105, 38);
-            this.remoteStartButton.Name = "remoteStartButton";
-            this.remoteStartButton.Size = new System.Drawing.Size(140, 78);
-            this.remoteStartButton.TabIndex = 5;
-            this.remoteStartButton.Text = "Remote Start";
-            this.remoteStartButton.UseVisualStyleBackColor = true;
+            this.RemoteStartButton.Location = new System.Drawing.Point(105, 38);
+            this.RemoteStartButton.Name = "RemoteStartButton";
+            this.RemoteStartButton.Size = new System.Drawing.Size(140, 78);
+            this.RemoteStartButton.TabIndex = 5;
+            this.RemoteStartButton.Text = "Remote Start";
+            this.RemoteStartButton.UseVisualStyleBackColor = true;
             // 
             // FuelIndicator
             // 
@@ -145,7 +145,7 @@
             // BatteryIndicator
             // 
             this.BatteryIndicator.Image = global::csci363_team_project.Properties.Resources.battery0;
-            this.BatteryIndicator.Location = new System.Drawing.Point(479, 6);
+            this.BatteryIndicator.Location = new System.Drawing.Point(487, 30);
             this.BatteryIndicator.Name = "BatteryIndicator";
             this.BatteryIndicator.Size = new System.Drawing.Size(57, 86);
             this.BatteryIndicator.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -276,16 +276,16 @@
             this.tabSettings.Text = "Settings";
             this.tabSettings.UseVisualStyleBackColor = true;
             // 
-            // internalTempIndicator
+            // InternalTempIndicator
             // 
-            this.internalTempIndicator.AutoSize = true;
-            this.internalTempIndicator.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.internalTempIndicator.ForeColor = System.Drawing.Color.Coral;
-            this.internalTempIndicator.Location = new System.Drawing.Point(486, 216);
-            this.internalTempIndicator.Name = "internalTempIndicator";
-            this.internalTempIndicator.Size = new System.Drawing.Size(102, 65);
-            this.internalTempIndicator.TabIndex = 7;
-            this.internalTempIndicator.Text = "86°";
+            this.InternalTempIndicator.AutoSize = true;
+            this.InternalTempIndicator.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InternalTempIndicator.ForeColor = System.Drawing.Color.Coral;
+            this.InternalTempIndicator.Location = new System.Drawing.Point(485, 226);
+            this.InternalTempIndicator.Name = "InternalTempIndicator";
+            this.InternalTempIndicator.Size = new System.Drawing.Size(102, 65);
+            this.InternalTempIndicator.TabIndex = 7;
+            this.InternalTempIndicator.Text = "86°";
             // 
             // vehicleControlApp
             // 
@@ -330,9 +330,9 @@
         private System.Windows.Forms.PictureBox doorStatusPictureBox;
         private System.Windows.Forms.Label doorStatusLabel;
         private System.Windows.Forms.PictureBox mapImage;
-        private System.Windows.Forms.Button remoteStartButton;
+        private System.Windows.Forms.Button RemoteStartButton;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label internalTempIndicator;
+        private System.Windows.Forms.Label InternalTempIndicator;
     }
 }
 

@@ -46,6 +46,11 @@ namespace csci363_team_project
                     //alarm_trigger = true
                     ;
                 }
+                else if (input[0] == "temp")
+                {
+                    UpdateTempIndicator(input[1]);
+                    
+                }
                 else if (input[0] == "fuel")
                 {
                     UpdateFuelIndicator(int.Parse(input[1]));
@@ -79,6 +84,26 @@ namespace csci363_team_project
                     break;
                 default:
                     BatteryIndicator.Image = Image.FromFile("battery5.jpg");
+                    break;
+            }
+        }
+        private void UpdateTempIndicator(String temperature)
+        {
+            InternalTempIndicator.Invoke(new Action(() => {InternalTempIndicator.Text = temperature+"°"; }));
+            
+            switch (int.Parse(temperature))
+            {
+                case int n when n <40:
+                    InternalTempIndicator.ForeColor = Color.Blue;
+                    break;
+                case int n when n < 60:
+                    InternalTempIndicator.ForeColor = Color.Green;
+                    break;
+                case int n when n < 80:
+                    InternalTempIndicator.ForeColor = Color.Coral;
+                    break;
+                default:
+                    InternalTempIndicator.ForeColor = Color.Red;
                     break;
             }
         }
