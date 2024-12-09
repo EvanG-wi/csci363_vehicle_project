@@ -40,6 +40,7 @@
             this.BatteryIndicator = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.RemoteStartButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabVehicleStatus.SuspendLayout();
             this.tabSecurity.SuspendLayout();
@@ -78,6 +79,7 @@
             // 
             // tabVehicleStatus
             // 
+            this.tabVehicleStatus.Controls.Add(this.RemoteStartButton);
             this.tabVehicleStatus.Controls.Add(this.FuelIndicator);
             this.tabVehicleStatus.Controls.Add(this.BatteryIndicator);
             this.tabVehicleStatus.Controls.Add(this.pictureBox1);
@@ -141,9 +143,9 @@
             // FuelIndicator
             // 
             this.FuelIndicator.Image = global::csci363_team_project.Properties.Resources.fuelIndicatorEmpty;
-            this.FuelIndicator.Location = new System.Drawing.Point(69, 23);
+            this.FuelIndicator.Location = new System.Drawing.Point(149, 171);
             this.FuelIndicator.Name = "FuelIndicator";
-            this.FuelIndicator.Size = new System.Drawing.Size(140, 99);
+            this.FuelIndicator.Size = new System.Drawing.Size(148, 81);
             this.FuelIndicator.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.FuelIndicator.TabIndex = 4;
             this.FuelIndicator.TabStop = false;
@@ -151,7 +153,7 @@
             // BatteryIndicator
             // 
             this.BatteryIndicator.Image = global::csci363_team_project.Properties.Resources.battery0;
-            this.BatteryIndicator.Location = new System.Drawing.Point(263, 45);
+            this.BatteryIndicator.Location = new System.Drawing.Point(207, 17);
             this.BatteryIndicator.Name = "BatteryIndicator";
             this.BatteryIndicator.Size = new System.Drawing.Size(57, 86);
             this.BatteryIndicator.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -161,7 +163,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::csci363_team_project.Properties.Resources.car_jpg;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(184, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(380, 341);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -177,6 +179,15 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
+            // 
+            // RemoteStartButton
+            // 
+            this.RemoteStartButton.Location = new System.Drawing.Point(591, 45);
+            this.RemoteStartButton.Name = "RemoteStartButton";
+            this.RemoteStartButton.Size = new System.Drawing.Size(106, 58);
+            this.RemoteStartButton.TabIndex = 5;
+            this.RemoteStartButton.Text = "Remote Start";
+            this.RemoteStartButton.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -213,6 +224,7 @@
         private System.Windows.Forms.PictureBox BatteryIndicator;
         private System.Windows.Forms.PictureBox FuelIndicator;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button RemoteStartButton;
     }
 }
 

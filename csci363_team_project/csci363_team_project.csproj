@@ -102,9 +102,6 @@
     <Content Include="battery5.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="car.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="car_jpg.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
