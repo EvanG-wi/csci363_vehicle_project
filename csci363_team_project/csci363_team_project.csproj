@@ -114,6 +114,9 @@
     <Content Include="fuelIndicatorHalf.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="map.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="person.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

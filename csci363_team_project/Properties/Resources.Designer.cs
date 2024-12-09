@@ -93,6 +93,26 @@ namespace csci363_team_project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap car_jpg1 {
+            get {
+                object obj = ResourceManager.GetObject("car_jpg1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap car_jpg2 {
+            get {
+                object obj = ResourceManager.GetObject("car_jpg2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap doorsAjar {
             get {
                 object obj = ResourceManager.GetObject("doorsAjar", resourceCulture);
@@ -116,6 +136,16 @@ namespace csci363_team_project.Properties {
         internal static System.Drawing.Bitmap locksmall {
             get {
                 object obj = ResourceManager.GetObject("locksmall", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap map {
+            get {
+                object obj = ResourceManager.GetObject("map", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
