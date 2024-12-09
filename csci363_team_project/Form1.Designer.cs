@@ -44,7 +44,6 @@
             this.tabUsers = new System.Windows.Forms.TabPage();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabSettings = new System.Windows.Forms.TabPage();
-            this.RemoteStartButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabVehicleStatus.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FuelIndicator)).BeginInit();
