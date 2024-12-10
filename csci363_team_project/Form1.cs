@@ -89,11 +89,11 @@ namespace csci363_team_project
         }
         private void UpdateTempIndicator(String temperature)
         {
-            InternalTempIndicator.Invoke(new Action(() => {InternalTempIndicator.Text = temperature+"°"; }));
             
-            switch (int.Parse(temperature))
+            int temp = int.Parse(temperature);
+            switch (temp)
             {
-                case int n when n <40:
+                case int n when n < 40:
                     InternalTempIndicator.ForeColor = Color.Blue;
                     break;
                 case int n when n < 60:
@@ -106,6 +106,15 @@ namespace csci363_team_project
                     InternalTempIndicator.ForeColor = Color.Red;
                     break;
             }
+
+            bool isCelsius=true;
+            tempUnitSelection.Invoke(new Action(() => { isCelsius = tempUnitSelection.SelectedIndex == 1; }));
+            if (isCelsius) //if celsius
+            {
+                temp = (temp - 32) / 2;
+            }
+            InternalTempIndicator.Invoke(new Action(() => { InternalTempIndicator.Text = temp.ToString() + "°"; }));
+
         }
         private void UpdateFuelIndicator(int percentFull)
         {

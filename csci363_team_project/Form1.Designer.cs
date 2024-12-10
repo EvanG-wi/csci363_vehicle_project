@@ -47,6 +47,12 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabSettings = new System.Windows.Forms.TabPage();
             this.InternalTempIndicator = new System.Windows.Forms.Label();
+            this.languageSelectBox = new System.Windows.Forms.ComboBox();
+            this.languageText = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tempUnitSelection = new System.Windows.Forms.ComboBox();
+            this.tempDisplayTypeLabel = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabLocate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mapImage)).BeginInit();
@@ -58,6 +64,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.doorStatusPictureBox)).BeginInit();
             this.tabUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.tabSettings.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -269,6 +276,12 @@
             // 
             // tabSettings
             // 
+            this.tabSettings.Controls.Add(this.tempDisplayTypeLabel);
+            this.tabSettings.Controls.Add(this.tempUnitSelection);
+            this.tabSettings.Controls.Add(this.label2);
+            this.tabSettings.Controls.Add(this.label1);
+            this.tabSettings.Controls.Add(this.languageText);
+            this.tabSettings.Controls.Add(this.languageSelectBox);
             this.tabSettings.Location = new System.Drawing.Point(4, 54);
             this.tabSettings.Name = "tabSettings";
             this.tabSettings.Size = new System.Drawing.Size(746, 396);
@@ -286,6 +299,69 @@
             this.InternalTempIndicator.Size = new System.Drawing.Size(102, 65);
             this.InternalTempIndicator.TabIndex = 7;
             this.InternalTempIndicator.Text = "86°";
+            // 
+            // languageSelectBox
+            // 
+            this.languageSelectBox.FormattingEnabled = true;
+            this.languageSelectBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.languageSelectBox.Items.AddRange(new object[] {
+            "English",
+            "Español",
+            "Français",
+            "中国人"});
+            this.languageSelectBox.Location = new System.Drawing.Point(224, 52);
+            this.languageSelectBox.Name = "languageSelectBox";
+            this.languageSelectBox.Size = new System.Drawing.Size(157, 29);
+            this.languageSelectBox.TabIndex = 0;
+            this.languageSelectBox.Text = "English";
+            // 
+            // languageText
+            // 
+            this.languageText.AutoSize = true;
+            this.languageText.Location = new System.Drawing.Point(125, 55);
+            this.languageText.Name = "languageText";
+            this.languageText.Size = new System.Drawing.Size(93, 21);
+            this.languageText.TabIndex = 1;
+            this.languageText.Text = "Language: ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(125, 168);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(232, 21);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Support Line: 1-800-538-2985";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(125, 138);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(168, 21);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Placeholder Setting: ";
+            // 
+            // tempUnitSelection
+            // 
+            this.tempUnitSelection.FormattingEnabled = true;
+            this.tempUnitSelection.Items.AddRange(new object[] {
+            "Fahrenheit",
+            "Celsius"});
+            this.tempUnitSelection.Location = new System.Drawing.Point(279, 101);
+            this.tempUnitSelection.Name = "tempUnitSelection";
+            this.tempUnitSelection.Size = new System.Drawing.Size(121, 29);
+            this.tempUnitSelection.TabIndex = 5;
+            this.tempUnitSelection.Text = "Fahrenheit";
+            // 
+            // tempDisplayTypeLabel
+            // 
+            this.tempDisplayTypeLabel.AutoSize = true;
+            this.tempDisplayTypeLabel.Location = new System.Drawing.Point(125, 104);
+            this.tempDisplayTypeLabel.Name = "tempDisplayTypeLabel";
+            this.tempDisplayTypeLabel.Size = new System.Drawing.Size(148, 21);
+            this.tempDisplayTypeLabel.TabIndex = 6;
+            this.tempDisplayTypeLabel.Text = "Temperature Unit:";
             // 
             // vehicleControlApp
             // 
@@ -309,6 +385,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.doorStatusPictureBox)).EndInit();
             this.tabUsers.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.tabSettings.ResumeLayout(false);
+            this.tabSettings.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -333,6 +411,12 @@
         private System.Windows.Forms.Button RemoteStartButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label InternalTempIndicator;
+        private System.Windows.Forms.ComboBox languageSelectBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label languageText;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox tempUnitSelection;
+        private System.Windows.Forms.Label tempDisplayTypeLabel;
     }
 }
 
