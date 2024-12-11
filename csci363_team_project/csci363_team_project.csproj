@@ -120,6 +120,12 @@
     <Content Include="person.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="vehicleOff.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="vehicleOn.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\doorsAjar.png" />
     <None Include="Resources\open-doorsmall.png" />
     <None Include="Resources\open-door.png" />

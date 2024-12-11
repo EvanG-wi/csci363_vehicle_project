@@ -17,6 +17,7 @@ namespace csci363_team_project
         private bool isAlarmArmed = false; // Track the alarm state
         private bool isLocked = false; // Track lock/unlock state
         private bool areDoorsAjar = false;
+        private bool vehicleOn = false;
         public vehicleControlApp()
         {
 
@@ -198,6 +199,17 @@ namespace csci363_team_project
             }
         }
 
-
+        private void RemoteStartButton_Click(object sender, EventArgs e)
+        {
+            vehicleOn = !vehicleOn;
+            if (vehicleOn) 
+            {
+                vehicleOnOffStatus.Image = Image.FromFile("vehicleOn.jpg");
+            }
+            else
+            {
+                vehicleOnOffStatus.Image = Image.FromFile("vehicleOff.jpg");
+            }
+        }
     }
 }

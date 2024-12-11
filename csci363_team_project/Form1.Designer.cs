@@ -53,6 +53,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tempUnitSelection = new System.Windows.Forms.ComboBox();
             this.tempDisplayTypeLabel = new System.Windows.Forms.Label();
+            this.vehicleOnOffStatus = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabLocate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mapImage)).BeginInit();
@@ -65,6 +66,7 @@
             this.tabUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabSettings.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vehicleOnOffStatus)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -107,6 +109,7 @@
             // 
             // tabVehicleStatus
             // 
+            this.tabVehicleStatus.Controls.Add(this.vehicleOnOffStatus);
             this.tabVehicleStatus.Controls.Add(this.InternalTempIndicator);
             this.tabVehicleStatus.Controls.Add(this.RemoteStartButton);
             this.tabVehicleStatus.Controls.Add(this.FuelIndicator);
@@ -138,6 +141,7 @@
             this.RemoteStartButton.TabIndex = 5;
             this.RemoteStartButton.Text = "Remote Start";
             this.RemoteStartButton.UseVisualStyleBackColor = true;
+            this.RemoteStartButton.Click += new System.EventHandler(this.RemoteStartButton_Click);
             // 
             // FuelIndicator
             // 
@@ -327,7 +331,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(125, 168);
+            this.label1.Location = new System.Drawing.Point(125, 179);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(232, 21);
             this.label1.TabIndex = 2;
@@ -336,7 +340,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(125, 138);
+            this.label2.Location = new System.Drawing.Point(125, 145);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(168, 21);
             this.label2.TabIndex = 3;
@@ -363,6 +367,16 @@
             this.tempDisplayTypeLabel.TabIndex = 6;
             this.tempDisplayTypeLabel.Text = "Temperature Unit:";
             // 
+            // vehicleOnOffStatus
+            // 
+            this.vehicleOnOffStatus.Image = global::csci363_team_project.Properties.Resources.vehicleOff;
+            this.vehicleOnOffStatus.Location = new System.Drawing.Point(122, 112);
+            this.vehicleOnOffStatus.Name = "vehicleOnOffStatus";
+            this.vehicleOnOffStatus.Size = new System.Drawing.Size(102, 28);
+            this.vehicleOnOffStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.vehicleOnOffStatus.TabIndex = 8;
+            this.vehicleOnOffStatus.TabStop = false;
+            // 
             // vehicleControlApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -387,6 +401,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabSettings.ResumeLayout(false);
             this.tabSettings.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vehicleOnOffStatus)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -417,6 +432,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox tempUnitSelection;
         private System.Windows.Forms.Label tempDisplayTypeLabel;
+        private System.Windows.Forms.PictureBox vehicleOnOffStatus;
     }
 }
 
