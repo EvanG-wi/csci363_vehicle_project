@@ -33,10 +33,12 @@
             this.tabLocate = new System.Windows.Forms.TabPage();
             this.mapImage = new System.Windows.Forms.PictureBox();
             this.tabVehicleStatus = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.vehicleOnOffStatus = new System.Windows.Forms.PictureBox();
+            this.InternalTempIndicator = new System.Windows.Forms.Label();
             this.RemoteStartButton = new System.Windows.Forms.Button();
             this.FuelIndicator = new System.Windows.Forms.PictureBox();
             this.BatteryIndicator = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabSecurity = new System.Windows.Forms.TabPage();
             this.doorStatusLabel = new System.Windows.Forms.Label();
             this.doorStatusPictureBox = new System.Windows.Forms.PictureBox();
@@ -46,27 +48,36 @@
             this.tabUsers = new System.Windows.Forms.TabPage();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabSettings = new System.Windows.Forms.TabPage();
-            this.InternalTempIndicator = new System.Windows.Forms.Label();
-            this.languageSelectBox = new System.Windows.Forms.ComboBox();
-            this.languageText = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tempUnitSelection = new System.Windows.Forms.ComboBox();
             this.tempDisplayTypeLabel = new System.Windows.Forms.Label();
-            this.vehicleOnOffStatus = new System.Windows.Forms.PictureBox();
+            this.tempUnitSelection = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.languageText = new System.Windows.Forms.Label();
+            this.languageSelectBox = new System.Windows.Forms.ComboBox();
+            this.userName = new System.Windows.Forms.Label();
+            this.mileageTracker = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabLocate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mapImage)).BeginInit();
             this.tabVehicleStatus.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vehicleOnOffStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FuelIndicator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BatteryIndicator)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabSecurity.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.doorStatusPictureBox)).BeginInit();
             this.tabUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabSettings.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.vehicleOnOffStatus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -123,15 +134,26 @@
             this.tabVehicleStatus.Text = "Vehicle Status";
             this.tabVehicleStatus.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // vehicleOnOffStatus
             // 
-            this.pictureBox1.Image = global::csci363_team_project.Properties.Resources.car_jpg1;
-            this.pictureBox1.Location = new System.Drawing.Point(148, -15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(450, 437);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.vehicleOnOffStatus.Image = global::csci363_team_project.Properties.Resources.vehicleOff;
+            this.vehicleOnOffStatus.Location = new System.Drawing.Point(122, 112);
+            this.vehicleOnOffStatus.Name = "vehicleOnOffStatus";
+            this.vehicleOnOffStatus.Size = new System.Drawing.Size(102, 28);
+            this.vehicleOnOffStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.vehicleOnOffStatus.TabIndex = 8;
+            this.vehicleOnOffStatus.TabStop = false;
+            // 
+            // InternalTempIndicator
+            // 
+            this.InternalTempIndicator.AutoSize = true;
+            this.InternalTempIndicator.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InternalTempIndicator.ForeColor = System.Drawing.Color.Coral;
+            this.InternalTempIndicator.Location = new System.Drawing.Point(485, 226);
+            this.InternalTempIndicator.Name = "InternalTempIndicator";
+            this.InternalTempIndicator.Size = new System.Drawing.Size(102, 65);
+            this.InternalTempIndicator.TabIndex = 7;
+            this.InternalTempIndicator.Text = "86°";
             // 
             // RemoteStartButton
             // 
@@ -162,6 +184,16 @@
             this.BatteryIndicator.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BatteryIndicator.TabIndex = 3;
             this.BatteryIndicator.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::csci363_team_project.Properties.Resources.car_jpg1;
+            this.pictureBox1.Location = new System.Drawing.Point(148, -15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(450, 437);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // tabSecurity
             // 
@@ -260,6 +292,15 @@
             // 
             // tabUsers
             // 
+            this.tabUsers.Controls.Add(this.pictureBox4);
+            this.tabUsers.Controls.Add(this.label7);
+            this.tabUsers.Controls.Add(this.label5);
+            this.tabUsers.Controls.Add(this.label6);
+            this.tabUsers.Controls.Add(this.label3);
+            this.tabUsers.Controls.Add(this.label4);
+            this.tabUsers.Controls.Add(this.pictureBox3);
+            this.tabUsers.Controls.Add(this.mileageTracker);
+            this.tabUsers.Controls.Add(this.userName);
             this.tabUsers.Controls.Add(this.pictureBox2);
             this.tabUsers.Location = new System.Drawing.Point(4, 54);
             this.tabUsers.Name = "tabUsers";
@@ -271,7 +312,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::csci363_team_project.Properties.Resources.person;
-            this.pictureBox2.Location = new System.Drawing.Point(10, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(128, 13);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(126, 153);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -293,16 +334,53 @@
             this.tabSettings.Text = "Settings";
             this.tabSettings.UseVisualStyleBackColor = true;
             // 
-            // InternalTempIndicator
+            // tempDisplayTypeLabel
             // 
-            this.InternalTempIndicator.AutoSize = true;
-            this.InternalTempIndicator.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InternalTempIndicator.ForeColor = System.Drawing.Color.Coral;
-            this.InternalTempIndicator.Location = new System.Drawing.Point(485, 226);
-            this.InternalTempIndicator.Name = "InternalTempIndicator";
-            this.InternalTempIndicator.Size = new System.Drawing.Size(102, 65);
-            this.InternalTempIndicator.TabIndex = 7;
-            this.InternalTempIndicator.Text = "86°";
+            this.tempDisplayTypeLabel.AutoSize = true;
+            this.tempDisplayTypeLabel.Location = new System.Drawing.Point(125, 104);
+            this.tempDisplayTypeLabel.Name = "tempDisplayTypeLabel";
+            this.tempDisplayTypeLabel.Size = new System.Drawing.Size(148, 21);
+            this.tempDisplayTypeLabel.TabIndex = 6;
+            this.tempDisplayTypeLabel.Text = "Temperature Unit:";
+            // 
+            // tempUnitSelection
+            // 
+            this.tempUnitSelection.FormattingEnabled = true;
+            this.tempUnitSelection.Items.AddRange(new object[] {
+            "Fahrenheit",
+            "Celsius"});
+            this.tempUnitSelection.Location = new System.Drawing.Point(279, 101);
+            this.tempUnitSelection.Name = "tempUnitSelection";
+            this.tempUnitSelection.Size = new System.Drawing.Size(121, 29);
+            this.tempUnitSelection.TabIndex = 5;
+            this.tempUnitSelection.Text = "Fahrenheit";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(125, 145);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(168, 21);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Placeholder Setting: ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(125, 179);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(232, 21);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Support Line: 1-800-538-2985";
+            // 
+            // languageText
+            // 
+            this.languageText.AutoSize = true;
+            this.languageText.Location = new System.Drawing.Point(125, 55);
+            this.languageText.Name = "languageText";
+            this.languageText.Size = new System.Drawing.Size(93, 21);
+            this.languageText.TabIndex = 1;
+            this.languageText.Text = "Language: ";
             // 
             // languageSelectBox
             // 
@@ -319,63 +397,92 @@
             this.languageSelectBox.TabIndex = 0;
             this.languageSelectBox.Text = "English";
             // 
-            // languageText
+            // userName
             // 
-            this.languageText.AutoSize = true;
-            this.languageText.Location = new System.Drawing.Point(125, 55);
-            this.languageText.Name = "languageText";
-            this.languageText.Size = new System.Drawing.Size(93, 21);
-            this.languageText.TabIndex = 1;
-            this.languageText.Text = "Language: ";
+            this.userName.AutoSize = true;
+            this.userName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userName.Location = new System.Drawing.Point(284, 35);
+            this.userName.Name = "userName";
+            this.userName.Size = new System.Drawing.Size(152, 25);
+            this.userName.TabIndex = 1;
+            this.userName.Text = "HumanName#1";
             // 
-            // label1
+            // mileageTracker
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(125, 179);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(232, 21);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Support Line: 1-800-538-2985";
+            this.mileageTracker.AutoSize = true;
+            this.mileageTracker.Location = new System.Drawing.Point(298, 71);
+            this.mileageTracker.Name = "mileageTracker";
+            this.mileageTracker.Size = new System.Drawing.Size(113, 21);
+            this.mileageTracker.TabIndex = 2;
+            this.mileageTracker.Text = "125,000 Miles";
             // 
-            // label2
+            // label3
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(125, 145);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(168, 21);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Placeholder Setting: ";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(147, 297);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(95, 21);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "1,443 Miles";
             // 
-            // tempUnitSelection
+            // label4
             // 
-            this.tempUnitSelection.FormattingEnabled = true;
-            this.tempUnitSelection.Items.AddRange(new object[] {
-            "Fahrenheit",
-            "Celsius"});
-            this.tempUnitSelection.Location = new System.Drawing.Point(279, 101);
-            this.tempUnitSelection.Name = "tempUnitSelection";
-            this.tempUnitSelection.Size = new System.Drawing.Size(121, 29);
-            this.tempUnitSelection.TabIndex = 5;
-            this.tempUnitSelection.Text = "Fahrenheit";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(131, 262);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(152, 25);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "HumanName#2";
             // 
-            // tempDisplayTypeLabel
+            // pictureBox3
             // 
-            this.tempDisplayTypeLabel.AutoSize = true;
-            this.tempDisplayTypeLabel.Location = new System.Drawing.Point(125, 104);
-            this.tempDisplayTypeLabel.Name = "tempDisplayTypeLabel";
-            this.tempDisplayTypeLabel.Size = new System.Drawing.Size(148, 21);
-            this.tempDisplayTypeLabel.TabIndex = 6;
-            this.tempDisplayTypeLabel.Text = "Temperature Unit:";
+            this.pictureBox3.Image = global::csci363_team_project.Properties.Resources.person;
+            this.pictureBox3.Location = new System.Drawing.Point(21, 239);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(104, 122);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
             // 
-            // vehicleOnOffStatus
+            // label5
             // 
-            this.vehicleOnOffStatus.Image = global::csci363_team_project.Properties.Resources.vehicleOff;
-            this.vehicleOnOffStatus.Location = new System.Drawing.Point(122, 112);
-            this.vehicleOnOffStatus.Name = "vehicleOnOffStatus";
-            this.vehicleOnOffStatus.Size = new System.Drawing.Size(102, 28);
-            this.vehicleOnOffStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.vehicleOnOffStatus.TabIndex = 8;
-            this.vehicleOnOffStatus.TabStop = false;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(409, 297);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(104, 21);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "75,000 Miles";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(399, 262);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(152, 25);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "HumanName#3";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(-74, 184);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(1011, 21);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "_________________________________________________________________________________" +
+    "______________________________________________________________";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::csci363_team_project.Properties.Resources.person;
+            this.pictureBox4.Location = new System.Drawing.Point(289, 239);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(104, 122);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 10;
+            this.pictureBox4.TabStop = false;
             // 
             // vehicleControlApp
             // 
@@ -391,17 +498,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.mapImage)).EndInit();
             this.tabVehicleStatus.ResumeLayout(false);
             this.tabVehicleStatus.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vehicleOnOffStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FuelIndicator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BatteryIndicator)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabSecurity.ResumeLayout(false);
             this.tabSecurity.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.doorStatusPictureBox)).EndInit();
             this.tabUsers.ResumeLayout(false);
+            this.tabUsers.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabSettings.ResumeLayout(false);
             this.tabSettings.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.vehicleOnOffStatus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -433,6 +543,15 @@
         private System.Windows.Forms.ComboBox tempUnitSelection;
         private System.Windows.Forms.Label tempDisplayTypeLabel;
         private System.Windows.Forms.PictureBox vehicleOnOffStatus;
+        private System.Windows.Forms.Label userName;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label mileageTracker;
     }
 }
 
