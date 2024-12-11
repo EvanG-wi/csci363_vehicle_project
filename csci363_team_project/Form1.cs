@@ -60,6 +60,15 @@ namespace csci363_team_project
                 {
                     UpdateBatteryIndicator(int.Parse(input[1]));
                 }
+                else if (input[0] == "drive")
+                {
+                    this.Invoke((MethodInvoker)delegate
+                    {
+                        int currentMileage = int.Parse(userMileage1.Text.Replace(",", "").Replace(" Miles", ""));
+                        userMileage1.Text = (currentMileage + int.Parse(input[1])).ToString() + " Miles";
+                    });
+                    
+                }
 
             }
         }
@@ -210,6 +219,27 @@ namespace csci363_team_project
             {
                 vehicleOnOffStatus.Image = Image.FromFile("vehicleOff.jpg");
             }
+        }
+
+        private void user2Button_Click(object sender, EventArgs e)
+        {
+            String nameHold = userName1.Text;
+            String mileageHold = userMileage1.Text;
+            userName1.Text = userName2.Text;
+            userMileage1.Text = userMileage2.Text;
+            userName2.Text = nameHold;
+            userMileage2.Text = mileageHold;
+
+        }
+
+        private void User3Button_Click(object sender, EventArgs e)
+        {
+            String nameHold = userName1.Text;
+            String mileageHold = userMileage1.Text;
+            userName1.Text = userName3.Text;
+            userMileage1.Text = userMileage3.Text;
+            userName3.Text = nameHold;
+            userMileage3.Text = mileageHold;
         }
     }
 }

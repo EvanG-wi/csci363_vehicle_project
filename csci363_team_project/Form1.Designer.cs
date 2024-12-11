@@ -45,10 +45,10 @@
             this.languageText = new System.Windows.Forms.Label();
             this.languageSelectBox = new System.Windows.Forms.ComboBox();
             this.userName1 = new System.Windows.Forms.Label();
-            this.mileageTracker = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.userMileage1 = new System.Windows.Forms.Label();
+            this.userMileage2 = new System.Windows.Forms.Label();
             this.userName2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.userMileage3 = new System.Windows.Forms.Label();
             this.userName3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.mapImage = new System.Windows.Forms.PictureBox();
@@ -63,6 +63,8 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.User3Button = new System.Windows.Forms.Button();
+            this.user2Button = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabLocate.SuspendLayout();
             this.tabVehicleStatus.SuspendLayout();
@@ -172,14 +174,16 @@
             // 
             // tabUsers
             // 
+            this.tabUsers.Controls.Add(this.user2Button);
+            this.tabUsers.Controls.Add(this.User3Button);
             this.tabUsers.Controls.Add(this.pictureBox4);
             this.tabUsers.Controls.Add(this.label7);
-            this.tabUsers.Controls.Add(this.label5);
+            this.tabUsers.Controls.Add(this.userMileage3);
             this.tabUsers.Controls.Add(this.userName3);
-            this.tabUsers.Controls.Add(this.label3);
+            this.tabUsers.Controls.Add(this.userMileage2);
             this.tabUsers.Controls.Add(this.userName2);
             this.tabUsers.Controls.Add(this.pictureBox3);
-            this.tabUsers.Controls.Add(this.mileageTracker);
+            this.tabUsers.Controls.Add(this.userMileage1);
             this.tabUsers.Controls.Add(this.userName1);
             this.tabUsers.Controls.Add(this.pictureBox2);
             this.tabUsers.Location = new System.Drawing.Point(4, 54);
@@ -277,23 +281,23 @@
             this.userName1.TabIndex = 1;
             this.userName1.Text = "HumanName#1";
             // 
-            // mileageTracker
+            // userMileage1
             // 
-            this.mileageTracker.AutoSize = true;
-            this.mileageTracker.Location = new System.Drawing.Point(285, 73);
-            this.mileageTracker.Name = "mileageTracker";
-            this.mileageTracker.Size = new System.Drawing.Size(113, 21);
-            this.mileageTracker.TabIndex = 2;
-            this.mileageTracker.Text = "125,000 Miles";
+            this.userMileage1.AutoSize = true;
+            this.userMileage1.Location = new System.Drawing.Point(285, 73);
+            this.userMileage1.Name = "userMileage1";
+            this.userMileage1.Size = new System.Drawing.Size(113, 21);
+            this.userMileage1.TabIndex = 2;
+            this.userMileage1.Text = "125,000 Miles";
             // 
-            // label3
+            // userMileage2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(132, 285);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 21);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "1,443 Miles";
+            this.userMileage2.AutoSize = true;
+            this.userMileage2.Location = new System.Drawing.Point(132, 285);
+            this.userMileage2.Name = "userMileage2";
+            this.userMileage2.Size = new System.Drawing.Size(95, 21);
+            this.userMileage2.TabIndex = 5;
+            this.userMileage2.Text = "1,443 Miles";
             // 
             // userName2
             // 
@@ -305,14 +309,14 @@
             this.userName2.TabIndex = 4;
             this.userName2.Text = "HumanName#2";
             // 
-            // label5
+            // userMileage3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(400, 285);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(104, 21);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "75,000 Miles";
+            this.userMileage3.AutoSize = true;
+            this.userMileage3.Location = new System.Drawing.Point(400, 285);
+            this.userMileage3.Name = "userMileage3";
+            this.userMileage3.Size = new System.Drawing.Size(104, 21);
+            this.userMileage3.TabIndex = 8;
+            this.userMileage3.Text = "75,000 Miles";
             // 
             // userName3
             // 
@@ -484,6 +488,26 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
+            // User3Button
+            // 
+            this.User3Button.Location = new System.Drawing.Point(404, 325);
+            this.User3Button.Name = "User3Button";
+            this.User3Button.Size = new System.Drawing.Size(142, 36);
+            this.User3Button.TabIndex = 11;
+            this.User3Button.Text = "Switch Account";
+            this.User3Button.UseVisualStyleBackColor = true;
+            this.User3Button.Click += new System.EventHandler(this.User3Button_Click);
+            // 
+            // user2Button
+            // 
+            this.user2Button.Location = new System.Drawing.Point(136, 325);
+            this.user2Button.Name = "user2Button";
+            this.user2Button.Size = new System.Drawing.Size(142, 36);
+            this.user2Button.TabIndex = 12;
+            this.user2Button.Text = "Switch Account";
+            this.user2Button.UseVisualStyleBackColor = true;
+            this.user2Button.Click += new System.EventHandler(this.user2Button_Click);
+            // 
             // vehicleControlApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -546,12 +570,14 @@
         private System.Windows.Forms.Label userName1;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label userMileage3;
         private System.Windows.Forms.Label userName3;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label userMileage2;
         private System.Windows.Forms.Label userName2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label mileageTracker;
+        private System.Windows.Forms.Label userMileage1;
+        private System.Windows.Forms.Button user2Button;
+        private System.Windows.Forms.Button User3Button;
     }
 }
 
