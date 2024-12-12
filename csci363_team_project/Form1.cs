@@ -18,6 +18,7 @@ namespace csci363_team_project
         private bool isLocked = false; // Track lock/unlock state
         private bool areDoorsAjar = false;
         private bool vehicleOn = false;
+        private bool isTrunkOpen = false; // Track trunk state
         public vehicleControlApp()
         {
 
@@ -163,6 +164,13 @@ namespace csci363_team_project
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            isLocked = false; // Default state: Unlocked
+            lockUnlockButton.Image = Properties.Resources.unlocksmall;
+            lockUnlockButton.Text = "Unlocked";
+            lockUnlockButton.BackColor = Color.LightGreen; // Green for unlocked
+            lockUnlockButton.ForeColor = Color.Black;
+
             // Set default state to disarmed
             isAlarmArmed = false; 
             armAlarmButton.BackColor = Color.LightGreen;
@@ -171,28 +179,42 @@ namespace csci363_team_project
             doorStatusPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             doorStatusPictureBox.BackColor = Color.Green;
 
+            isTrunkOpen = false; // Default state: Trunk closed
+            openTrunkButton.Text = "Open Trunk";
+            openTrunkButton.BackColor = Color.LightGreen; // Green for closed trunk
+            openTrunkButton.ForeColor = Color.Black;
+
         }
 
         private void lockUnlockButton_Click(object sender, EventArgs e)
         {
-            isLocked = !isLocked;
+            isLocked = !isLocked; // Toggle lock state
 
             if (isLocked)
             {
+                // Locked state
                 lockUnlockButton.Image = Properties.Resources.locksmall;
-                lockUnlockButton.Text = "Locked"; // Optional: Update text
+                lockUnlockButton.Text = "Locked";
+                lockUnlockButton.BackColor = Color.LightCoral; // Red for locked
+                lockUnlockButton.ForeColor = Color.White; // Contrast text color
             }
             else
             {
-                lockUnlockButton.Image = Properties.Resources.unlocksmall; // Set to unlocked image
-                lockUnlockButton.Text = "Unlocked"; // Optional: Update text
+                // Unlocked state
+                lockUnlockButton.Image = Properties.Resources.unlocksmall;
+                lockUnlockButton.Text = "Unlocked";
+                lockUnlockButton.BackColor = Color.LightGreen; // Green for unlocked
+                lockUnlockButton.ForeColor = Color.Black; // Default text color
             }
+
+            // Refresh to ensure UI updates immediately
+            lockUnlockButton.Refresh();
         }
 
 
         private void UpdateDoorStatus()
         {
-            if (areDoorsAjar)
+            if (areDoorsAjar = !areDoorsAjar)
             {
                 // Set "Doors Ajar" state
                 doorStatusPictureBox.BackColor = Color.Red;
@@ -240,6 +262,45 @@ namespace csci363_team_project
             userMileage1.Text = userMileage3.Text;
             userName3.Text = nameHold;
             userMileage3.Text = mileageHold;
+        }
+
+        private void doorStatusPictureBox_Click(object sender, EventArgs e)
+        {
+            // Toggle the door state
+            areDoorsAjar = !areDoorsAjar;
+
+            if (areDoorsAjar)
+            {
+                // Update to "Doors Ajar" state
+                doorStatusPictureBox.BackColor = Color.Red; // Background color
+                doorStatusLabel.Text = "Doors: Ajar"; // Label text
+                doorStatusLabel.ForeColor = Color.Red; // Label text color
+            }
+            else
+            {
+                // Update to "Doors Closed" state
+                doorStatusPictureBox.BackColor = Color.Green; // Background color
+                doorStatusLabel.Text = "Doors: Closed"; // Label text
+                doorStatusLabel.ForeColor = Color.Green; // Label text color
+            }
+        }
+
+        private void openTrunkButton_Click(object sender, EventArgs e)
+        {
+            isTrunkOpen = !isTrunkOpen; // Toggle trunk state
+
+            if (isTrunkOpen)
+            {
+                openTrunkButton.Text = "Close Trunk"; // Update button text
+                openTrunkButton.BackColor = Color.LightCoral; // Optional: Color for open state
+                
+            }
+            else
+            {
+                openTrunkButton.Text = "Open Trunk"; // Update button text
+                openTrunkButton.BackColor = Color.LightGreen; // Optional: Color for closed state
+
+            }
         }
     }
 }
